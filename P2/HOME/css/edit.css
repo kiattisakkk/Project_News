@@ -1,0 +1,164 @@
+:root {
+    --primary-color: #00838f;
+    --secondary-color: #0097a7;
+    --accent-color: #ffd54f;
+    --text-color: #333;
+    --card-background: #ffffff;
+    --highlight-color: #ff5722;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #FCE4EC;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.header {
+    background-color: #FB6F92;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    box-shadow: 0 4px 19px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* ให้โลโก้และชื่อชิดซ้าย */
+}
+
+.logo {
+    width: 80px; /* ขนาดของโลโก้ */
+    height: auto;
+    margin-right: 10px; /* ระยะห่างระหว่างโลโก้กับชื่อ */
+}
+
+.school-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    margin-left: auto; /* ให้เมนูชิดขอบขวา */
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; /* เว้นระยะห่างระหว่างปุ่มแต่ละอัน */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    background-color: #FF9BB4; /* พื้นหลังของปุ่ม */
+    padding: 10px 20px; /* เว้นระยะห่างภายในปุ่ม */
+    font-size: 18px;
+    border-radius: 30px; /* ทำให้ปุ่มมีขอบโค้งมน */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* เพิ่มเอฟเฟกต์เวลา hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับปุ่ม */
+}
+
+.nav-links a:hover {
+    background-color: #FFBCCD; /* เปลี่ยนสีเมื่อ hover */
+    transform: translateY(-2px); /* เพิ่มเอฟเฟกต์การยกปุ่มเมื่อ hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเมื่อ hover */
+}
+
+.container {
+    max-width: 1500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #FB6F92;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #FF9BB4;
+}
+
+.media-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.delete-btn {
+    background-color: #ff5252;
+    padding: 8px 16px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #e64a19;
+}
+
+.media-title {
+    font-size: 18px;
+    color: #ff5252;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+}
